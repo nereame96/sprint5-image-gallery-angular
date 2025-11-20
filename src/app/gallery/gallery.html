@@ -1,8 +1,8 @@
 
-@for(image of images(); track image.id) {
-  <div>
-    <p>{{image.description}}</p>
-    <img [src]='image.url' >
-  </div>
+@for(image of images(); track image.id; let i = $index) {
+  <app-image-item
+  [image] = 'image'
+  [isFeatured] = '$index === 0'
+  />
 }
 

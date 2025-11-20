@@ -1,0 +1,7 @@
+
+/* Estilos para el elemento destacado (se activa cuando el host tiene la clase 'featured') */
+:host(.featured) > div {
+  border: 4px solid gold; /* Borde para destacar */
+
+}
+
