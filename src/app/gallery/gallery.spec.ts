@@ -1,25 +1,33 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
-import { Gallery } from './gallery';
+import { GalleryComponent } from './gallery';
 
-describe('Gallery', () => {
-  let component: Gallery;
-  let fixture: ComponentFixture<Gallery>;
+describe('test of GalleryComponent', () => {
+  let component: GalleryComponent;
+  let fixture: ComponentFixture<GalleryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Gallery],
+      imports: [GalleryComponent],
       providers: [provideZonelessChangeDetection()],
-    }).compileComponents();
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Gallery);
+
+    fixture = TestBed.createComponent(GalleryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  })
 
-  it('should create', () => {
+
+  it('should create the GalleryComponent', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should start with Gallery array', () => {
+    expect(component.images().length).toBe(9)
+    expect(component.images()[0].id).toBe(1)
+  })
+
+
 });
