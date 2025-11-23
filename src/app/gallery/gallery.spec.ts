@@ -6,7 +6,7 @@ describe('test of GalleryComponent', () => {
   let component: GalleryComponent;
   let fixture: ComponentFixture<GalleryComponent>;
 
-  beforeEach(async () => {
+  beforeEach(async () : Promise<void> => {
     await TestBed.configureTestingModule({
       imports: [GalleryComponent],
       providers: [provideZonelessChangeDetection()],
@@ -20,11 +20,11 @@ describe('test of GalleryComponent', () => {
   })
 
 
-  it('should create the GalleryComponent', () => {
+  it('should create the GalleryComponent', () : void => {
     expect(component).toBeTruthy();
   });
 
-  it('should start with Gallery array', () => {
+  it('should start with Gallery array', () : void => {
     expect(component.images().length).toBe(9)
     expect(component.images()[0].id).toBe(1)
   })

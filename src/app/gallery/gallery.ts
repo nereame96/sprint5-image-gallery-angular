@@ -63,5 +63,5 @@ export const Gallery: Image[] = [
 
 export class GalleryComponent {
 
-  images = signal(Gallery)
+  images = signal<Image[]>(Gallery);
 }

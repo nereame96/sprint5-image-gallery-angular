@@ -15,23 +15,24 @@ export class ImageItemComponent {
   image = input.required<Image>()
   isFeatured = input(false)
 
-  onImageClick() {
+  onImageClick(event?: MouseEvent | KeyboardEvent): void {
+    event?.preventDefault();
     console.log('Clicked image:', this.image().title);
 
   }
 
   @HostBinding('class.col-span-2')
-    get colSpan() {
+    get colSpan() : boolean {
       return this.isFeatured()
     }
   @HostBinding('class.row-span-2')
-    get rowSpan() {
+    get rowSpan() : boolean {
       return this.isFeatured()
     }
 
   @HostBinding('class.featured')
 
-    get isFeaturedClass() {
+    get isFeaturedClass() : boolean {
 
         return this.isFeatured();
     }
