@@ -1,10 +1,20 @@
-<div class=" h-full w-full hover:shadow-xl transition-shadow duration-300">
+<div class=" h-full w-full hover:shadow-xl transition-shadow duration-300"
+
+tabindex="0"
+role="button"
+[attr.aria-label]="'Watch image: ' + image().title"
+(click)="onImageClick()"
+(keydown.enter)="onImageClick()"
+(keydown.space)="onImageClick()"
+>
+
+
   <img
   [src]='image().url'
   [alt]="image().alt"
   class="w-full h-full  rounded" >
 
-  <p class="text-sm md:text-base text-center p-1 mb-3">{{image().title}}</p>
+  <p class="text-sm  md:text-base text-gray-900 text-center p-1 mb-3 font-semibold">{{image().title}}</p>
 
 </div>
 

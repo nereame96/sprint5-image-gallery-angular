@@ -1,7 +1,10 @@
 
 /* Estilos para el elemento destacado (se activa cuando el host tiene la clase 'featured') */
 :host(.featured) > div {
-  border: 4px solid #3b82f6;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+  p {
+    color: green;
+    font-weight: 900;
+
+  }
 }
 

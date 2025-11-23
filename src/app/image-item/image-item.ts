@@ -15,6 +15,11 @@ export class ImageItemComponent {
   image = input.required<Image>()
   isFeatured = input(false)
 
+  onImageClick() {
+    console.log('Clicked image:', this.image().title);
+
+  }
+
   @HostBinding('class.col-span-2')
     get colSpan() {
       return this.isFeatured()

@@ -5,23 +5,23 @@ import { ImageItemComponent } from '../image-item/image-item';
 
 export const Gallery: Image[] = [
   { id : 1,
-    url: 'https://picsum.photos/id/10/300/200',
-    alt: 'Image of Forest',
+    url: 'https://picsum.photos/id/10/600/400',
+    alt: 'Image of Forest with tall pinetrees and the sea at the background',
     title: 'Forest'
   },
   { id : 2,
     url: 'https://picsum.photos/id/11/300/200',
-    alt: 'Image if River',
-    title: 'River'
+    alt: 'Image of a forest creek in a gloomy day',
+    title: 'Creek'
   },
   { id : 3,
     url: 'https://picsum.photos/id/12/300/200',
-    alt: 'Image of Sand Beach',
+    alt: 'Image of a Sand Beach i a gloomy day',
     title: 'Sand Beach'
   },
   { id : 4,
     url: 'https://picsum.photos/id/13/300/200',
-    alt: 'Image of Rocky Beach',
+    alt: 'Image of a Rocky Beach with pinetrees',
     title: 'Rocky Beach'
   },
   { id : 5,
@@ -31,7 +31,7 @@ export const Gallery: Image[] = [
   },
   { id : 6,
     url: 'https://picsum.photos/id/15/300/200',
-    alt: 'Image of Waterfall',
+    alt: 'Image of a tall Waterfall in a deep forest',
     title: 'Waterfall'
   },
   { id : 7,
