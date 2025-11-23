@@ -1,6 +1,10 @@
-<div>
-  <img [src]='image().url' [alt]="image().alt"  >
-  <p>{{image().title}}</p>
+<div class=" h-full w-full hover:shadow-xl transition-shadow duration-300">
+  <img
+  [src]='image().url'
+  [alt]="image().alt"
+  class="w-full h-full  rounded" >
+
+  <p class="text-sm md:text-base text-center p-1 mb-3">{{image().title}}</p>
 
 </div>
 

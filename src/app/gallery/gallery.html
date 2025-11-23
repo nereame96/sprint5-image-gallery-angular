@@ -1,8 +1,24 @@
 
-@for(image of images(); track image.id; let i = $index) {
-  <app-image-item
-  [image] = 'image'
-  [isFeatured] = '$index === 0'
-  />
-}
+<div class="min-h-screen bg-white p-4 md:p-8">
+  <!-- Este div está CENTRADO horizontalmente -->
+  <div class="max-w-full md:max-w-4xl lg:max-w-7xl mx-auto w-full">
+    <h1 class="text-4xl md:text-6xl font-bold text-center mb-8">
+      Image Gallery
+    </h1>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-8 w-full mb-3">
+
+      @for(image of images(); track image.id; let i = $index) {
+        <app-image-item
+        [image] = 'image'
+        [isFeatured] = '$index === 0'
+        />
+      }
+
+    </div>
+
+  </div>
+
+</div>
+
 
