@@ -1,59 +1,151 @@
-# Sprint5
+# Sprint5 - Image Gallery with Angular 20
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
+A responsive image gallery application built with Angular 20, featuring a masonry-style grid layout with a featured image and full accessibility support.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **Responsive Grid Layout**: 2 columns on mobile, 4 on tablet, 5 on desktop
+- **Featured Image**: One image occupies 2x2 grid cells across all breakpoints
+- **Accessibility First**: 
+  - Full keyboard navigation support
+  - ARIA labels and semantic HTML
+  - Screen reader compatible
+  - High contrast ratios
+- **Modern Stack**: 
+  - Angular 20 with standalone components
+  - Tailwind CSS v4 for styling
+  - TypeScript with strict typing
+  - Signals for reactive state management
 
+## 📋 Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- Angular CLI 20.3.10
+
+## 🛠️ Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd sprint5-image-gallery-angular
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Open your browser and navigate to `http://localhost:4200/`
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Technologies Used
 
-```bash
-ng generate component component-name
+### Core
+- **Angular 20.3.x** - Modern web framework
+- **TypeScript 5.x** - Type-safe JavaScript
+
+### Styling
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **SCSS** - CSS preprocessor
+
+### Testing
+- **Jasmine** - Testing framework
+- **Karma** - Test runner
+
+## Project Structure
+
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+├──src
+│   ├──app
+│   │   ├──gallery
+│   │   │   ├──gallery.html
+│   │   │   ├──gallery.scss
+│   │   │   ├──gallery.spec.ts
+│   │   │   └──gallery.ts
+│   │   ├──image-item
+│   │   │   ├──image-item.html
+│   │   │   ├──image-item.scss
+│   │   │   ├──image-item.spec.ts
+│   │   │   └──image-item.ts
+│   │   ├──interfaces
+│   │   │   └──image.interface.ts
+│   │   ├──app.config.server.ts
+│   │   ├──app.config.ts
+│   │   ├──app.html
+│   │   ├──app.routes.server.ts
+│   │   ├──app.routes.ts
+│   │   ├──app.scss
+│   │   ├──app.spec.ts
+│   │   └──app.ts
+│   ├──index.html
+│   ├──main.server.ts
+│   ├──main.ts
+│   ├──server.ts
+│   └──styles.scss
 
-```bash
-ng generate --help
+
 ```
 
-## Building
+##  Responsive Breakpoints
 
-To build the project run:
+| Device | Screen Width | Columns | Featured Image |
+|--------|--------------|---------|----------------|
+| Mobile | < 768px | 2 | 2x2 cells |
+| Tablet | 768px - 1024px | 4 | 2x2 cells |
+| Desktop | > 1024px | 5 | 2x2 cells |
 
-```bash
-ng build
-```
+## Component Architecture
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### GalleryComponent
+- Main container component
+- Manages image data with signals
+- Renders grid layout
 
-## Running unit tests
+### ImageItemComponent
+**Inputs:**
+- `image` (required): Image data object
+- `isFeatured` (optional): Boolean to mark as featured
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+**Features:**
+- Dynamic grid spanning for featured images
+- Hover effects and transitions
+- Click/keyboard event handling
+- Accessible markup
 
+##  Testing
+
+### Run unit tests:
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
+### Run tests with coverage:
 ```bash
-ng e2e
+ng test --code-coverage
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### Run specific test file:
+```bash
+ng test --include='**/image-item.spec.ts'
+```
 
-## Additional Resources
+##  Building for Production
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Build the project:
+```bash
+ng build
+```
+
+The build artifacts will be stored in the `dist/` directory, optimized for production.
+
+## Author
+
+Nerea Medina Carrasco
+https://github.com/nereame96
